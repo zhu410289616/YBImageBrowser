@@ -27,7 +27,15 @@ typedef void(^YBIBSheetActionBlock)(id<YBIBDataProtocol> data);
 @end
 
 
-@interface YBIBSheetView : UIView
+@interface YBIBSheetCell : UITableViewCell
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) CALayer *line;
+@end
+
+
+@interface YBIBSheetView : UIView <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong, readonly) UITableView *tableView;
 
 /// 数据源 (可自定义添加)
 @property (nonatomic, strong) NSMutableArray<YBIBSheetAction *> *actions;

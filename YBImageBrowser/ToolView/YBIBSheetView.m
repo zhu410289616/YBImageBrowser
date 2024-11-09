@@ -21,10 +21,6 @@
 @end
 
 
-@interface YBIBSheetCell : UITableViewCell
-@property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) CALayer *line;
-@end
 @implementation YBIBSheetCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -53,7 +49,7 @@
 
 static CGFloat kOffsetSpace = 5;
 
-@interface YBIBSheetView () <UITableViewDelegate, UITableViewDataSource>
+@interface YBIBSheetView ()
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
